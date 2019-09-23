@@ -11,7 +11,7 @@ type linkType = {
 
 const navList: linkType[] = [
   {
-    href: "https://www.alphamedical.com",
+    href: "https://www.helloalpha.com",
     text: "Works at Alpha Medical as a web developer."
   },
   {
