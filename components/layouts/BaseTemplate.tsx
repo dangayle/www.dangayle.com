@@ -15,9 +15,7 @@ const BaseTemplate: React.FunctionComponent<Props> = ({
     <Head>
       <title>{title}</title>
     </Head>
-    <header>
-      <Header />
-    </header>
+    <Header />
     <main className="mw8 center">{children}</main>
   </div>
 );
