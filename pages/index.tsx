@@ -63,7 +63,7 @@ const navList: linkType[] = [
 ];
 
 const Home: React.FunctionComponent = () => (
-  <BaseTemplate title="Home">
+  <BaseTemplate title="Dan Gayle">
     <nav className="text-xl">
       <ul className="mb-8">
         {navList.map(link => (
