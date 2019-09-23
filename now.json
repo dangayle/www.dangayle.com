@@ -1,0 +1,9 @@
+{
+    "version": 2,
+    "alias": ["dangayle.com"],
+    "routes": [{
+        "src": "/(.*)",
+        "status": 301,
+        "headers": { "Location": "https://www.dangayle.com/$1" }
+    }]
+}
