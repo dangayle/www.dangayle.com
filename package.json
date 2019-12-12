@@ -10,25 +10,25 @@
     },
     "devDependencies": {
         "@fullhuman/postcss-purgecss": "^1.3.0",
-        "@types/next": "^8.0.6",
-        "@types/react": "^16.9.2",
-        "@types/react-dom": "^16.9.0",
+        "@types/next": "^8.0.7",
+        "@types/react": "^16.9.16",
+        "@types/react-dom": "^16.9.4",
         "@types/react-gtm-module": "^2.0.0",
         "@types/styled-jsx": "^2.2.8",
         "@zeit/next-css": "^1.0.1",
         "@zeit/next-typescript": "^1.1.1",
-        "autoprefixer": "^9.6.1",
+        "autoprefixer": "^9.7.3",
         "next": "9.0.6",
-        "next-purgecss": "^3.1.1",
-        "postcss": "^7.0.18",
+        "next-purgecss": "^3.1.2",
+        "postcss": "^7.0.24",
         "postcss-preset-env": "^6.7.0",
         "prettier": "1.18.2",
         "react": "16.9.0",
         "react-dom": "16.9.0",
         "react-gtm-module": "^2.0.8",
         "styled-jsx-plugin-postcss": "^2.0.1",
-        "tailwindcss": "^1.1.2",
-        "typescript": "^3.6.3"
+        "tailwindcss": "^1.1.4",
+        "typescript": "^3.7.3"
     },
     "dependencies": {}
 }
