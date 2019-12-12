@@ -12,11 +12,11 @@ type linkType = {
 const navList: linkType[] = [
   {
     href: "https://www.helloalpha.com",
-    text: "Works at Alpha Medical as a web developer."
+    text: "Works at Alpha Medical as a software engineer."
   },
   {
     href: "https://www.spokesman.com",
-    text: "Formerly a web dev at The Spokesman-Review."
+    text: "Formerly a Django web dev at The Spokesman-Review."
   },
   {
     href: "https://www.soundcloud.com/dangayle/",
@@ -59,6 +59,10 @@ const navList: linkType[] = [
     href: "https://nextjs.org",
     text:
       "Learning that NextJS static html React pages can be fun and profitable."
+  },
+  {
+    href: "https://www.gatsbyjs.org",
+    text: "And Gatsby too."
   }
 ];
 
@@ -78,21 +82,21 @@ const Home: React.FunctionComponent = () => (
       </p>
     </nav>
     <style global={true} jsx={true}>{`
-    .grow{
-      -moz-osx-font-smoothing: grayscale;
-      backface-visibility: hidden;
-      transform: translateZ(0);
-      transition: transform 0.25s ease-out;
-    }
+      .grow {
+        -moz-osx-font-smoothing: grayscale;
+        backface-visibility: hidden;
+        transform: translateZ(0);
+        transition: transform 0.25s ease-out;
+      }
 
-    .grow:hover,
-    .grow:focus {
-      transform: scale(1.05);
-    }
+      .grow:hover,
+      .grow:focus {
+        transform: scale(1.05);
+      }
 
-    .grow:active {
-      transform: scale(.90);
-    }
+      .grow:active {
+        transform: scale(0.9);
+      }
     `}</style>
   </BaseTemplate>
 );
