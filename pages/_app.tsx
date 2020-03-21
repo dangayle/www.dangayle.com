@@ -4,7 +4,7 @@ import TagManager from "react-gtm-module";
 import { TagManagerArgs } from "react-gtm-module";
 
 const tagManagerArgs: TagManagerArgs = {
-  gtmId: "GTM-TPL9Q6V",
+  gtmId: "GTM-TPL9Q6V"
 };
 
 class MyApp extends App {
