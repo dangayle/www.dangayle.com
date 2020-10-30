@@ -18,7 +18,7 @@
         "@zeit/next-css": "^1.0.1",
         "@zeit/next-typescript": "^1.1.1",
         "autoprefixer": "^9.7.3",
-        "next": "9.0.6",
+        "next": "9.3.2",
         "next-purgecss": "^3.1.2",
         "postcss": "^7.0.24",
         "postcss-preset-env": "^6.7.0",
