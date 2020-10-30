@@ -12,6 +12,10 @@ class MyDocument extends Document {
       <Html className="f4">
         <Head>
           <link rel="shortcut icon" href="/favicon.ico" />
+          <script
+            data-ad-client="ca-pub-3031118380746335"
+            async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         </Head>
         <body className="font-sans">
           <Main />

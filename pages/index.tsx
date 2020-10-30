@@ -12,65 +12,61 @@ type linkType = {
 const navList: linkType[] = [
   {
     href: "https://www.helloalpha.com",
-    text: "Works at Alpha Medical as a software engineer."
+    text: "Works at Alpha Medical as a software engineer.",
   },
   {
     href: "https://www.spokesman.com",
-    text: "Formerly a Django web dev at The Spokesman-Review."
-  },
-  {
-    href: "https://www.soundcloud.com/dangayle/",
-    text: "Makes bad techno that no one should listen to."
+    text: "Formerly a Django web dev at The Spokesman-Review.",
   },
   {
     href: "https://www.twitter.com/dangayle/",
-    text: "Shouts into the wind on Twitter."
+    text: "Shouts into the wind on Twitter.",
   },
   {
     href: "https://www.linkedin.com/in/dangayle/",
-    text: "Keeps his LinkedIn up to date, doesn't know why."
+    text: "Keeps his LinkedIn up to date, doesn't know why.",
   },
   {
     href: "https://www.flickr.com/photos/dangayle/",
-    text: "Used to do photography until someone stole his camera bag."
+    text: "Used to do photography until someone stole his camera bag.",
   },
   {
     href: "https://www.instagram.com/melvin_the_fluffy/",
-    text: "Misses his squish-faced friend, Melvin the Fluffy. RIP."
+    text: "Misses his squish-faced friend, Melvin the Fluffy. RIP.",
   },
   {
     href: "https://www.instagram.com/fred_phyllis_george/",
     text:
-      "Struggles to maintain sanity working from home with two cats and an idiot doodle."
+      "Struggles to maintain sanity working from home with two cats and an idiot doodle.",
   },
   {
     href: "http://tachyons.io/",
-    text: "Loves atomic CSS, built spokesman.com using Tachyons."
+    text: "Loves atomic CSS, built spokesman.com using Tachyons.",
   },
   {
     href: "https://tailwindcss.com",
-    text: "Still loves atomic CSS, and uses Tailwind CSS at Alpha Medical."
+    text: "Still loves atomic CSS, and uses Tailwind CSS at Alpha Medical.",
   },
   {
     href: "https://craftcms.com",
-    text: "Learning that CraftCMS makes for a fine headless CMS."
+    text: "Learning that CraftCMS makes for a fine headless CMS.",
   },
   {
     href: "https://nextjs.org",
     text:
-      "Learning that NextJS static html React pages can be fun and profitable."
+      "Learning that NextJS static html React pages can be fun and profitable.",
   },
   {
     href: "https://www.gatsbyjs.org",
-    text: "And Gatsby too."
-  }
+    text: "And Gatsby too.",
+  },
 ];
 
 const Home: React.FunctionComponent = () => (
   <BaseTemplate title="Dan Gayle">
     <nav className="text-xl">
       <ul className="mb-8">
-        {navList.map(link => (
+        {navList.map((link) => (
           <li key={link.href} className="mb-4 md:mb-2 grow">
             <TextLink text={link.text} href={link.href} />
           </li>
