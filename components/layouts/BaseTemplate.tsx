@@ -1,6 +1,5 @@
 import React from "react";
 import Head from "next/head";
-import "../../static/style.css";
 import Header from "../Header";
 
 type Props = {
@@ -9,7 +8,7 @@ type Props = {
 
 const BaseTemplate: React.FunctionComponent<Props> = ({
   children,
-  title = "This is the default title"
+  title = "This is the default title",
 }) => (
   <div className="max-w-5xl mx-auto p-4 md:p-16 leading-tight">
     <Head>

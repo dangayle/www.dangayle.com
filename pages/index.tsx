@@ -1,8 +1,6 @@
 import React from "react";
-import Head from "next/head";
 import BaseTemplate from "../components/layouts/BaseTemplate";
 import TextLink from "../components/TextLink";
-import "../static/style.css";
 
 type linkType = {
   text: string;

@@ -2,9 +2,10 @@ import React from "react";
 import App from "next/app";
 import TagManager from "react-gtm-module";
 import { TagManagerArgs } from "react-gtm-module";
+import "./css/style.css";
 
 const tagManagerArgs: TagManagerArgs = {
-  gtmId: "GTM-TPL9Q6V"
+  gtmId: "GTM-TPL9Q6V",
 };
 
 class MyApp extends App {

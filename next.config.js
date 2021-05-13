@@ -1,32 +1,33 @@
-const withCSS = require('@zeit/next-css')
-const withPurgeCss = require("next-purgecss");
+module.exports = {
+  future: {
+    webpack5: true,
+  },
 
-class TailwindExtractor {
-    static extract(content) {
-        return content.match(/[\w-/:]+(?<!:)/g) || [];
-    }
-}
-module.exports = withPurgeCss(withCSS({
-    plugins: [
-        ["styled-jsx/babel", {
-            plugins: [
-                [
-                    "styled-jsx-plugin-postcss",
-                    {
-                        path: "./postcss.config.js"
-                    }
-                ]
-            ]
-        }]
+  plugins: [
+    "postcss-flexbugs-fixes",
+    [
+      "postcss-preset-env",
+      {
+        autoprefixer: {
+          flexbox: "no-2009",
+        },
+        stage: 3,
+        features: {
+          "custom-properties": false,
+        },
+      },
     ],
-    purgeCss: {
-        extractors: [{
-            extractor: TailwindExtractor,
-            extensions: ["html", "js", "jsx", "tsx", "css"]
-        }]
-    },
-    cssLoaderOptions: {
-        importLoaders: 1,
-        localIdentName: "[local]_[hash:base64:5]"
-    }
-}));
+    [("styled-jsx/babel", { plugins: ["styled-jsx-plugin-postcss"] })],
+    [
+      "@fullhuman/postcss-purgecss",
+      {
+        content: [
+          "./pages/**/*.{js,jsx,ts,tsx}",
+          "./components/**/*.{js,jsx,ts,tsx}",
+        ],
+        defaultExtractor: (content) => content.match(/[\w-/:]+(?<!:)/g) || [],
+        safelist: ["html", "body"],
+      },
+    ],
+  ],
+};
