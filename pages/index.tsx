@@ -11,16 +11,20 @@ type linkType = {
 
 const navList: linkType[] = [
   {
+    href: "https://www.crateandbarrel.com",
+    text: "A Senior Frontend Developer at Crate and Barrel.",
+  },
+  {
     href: "https://www.helloalpha.com",
-    text: "Works at Alpha Medical as a software engineer.",
+    text: "Formerly a software engineer at Alpha Medical.",
   },
   {
     href: "https://www.spokesman.com",
-    text: "Formerly a Django web dev at The Spokesman-Review.",
+    text: "Formerly an online developer in The Spokesman-Review's newsroom.",
   },
   {
     href: "https://www.twitter.com/dangayle/",
-    text: "Shouts into the wind on Twitter.",
+    text: "Sometimes shouts into the wind on Twitter.",
   },
   {
     href: "https://www.linkedin.com/in/dangayle/",
@@ -40,25 +44,12 @@ const navList: linkType[] = [
       "Struggles to maintain sanity working from home with two cats and an idiot doodle.",
   },
   {
-    href: "http://tachyons.io/",
-    text: "Loves atomic CSS, built spokesman.com using Tachyons.",
-  },
-  {
     href: "https://tailwindcss.com",
-    text: "Still loves atomic CSS, and uses Tailwind CSS at Alpha Medical.",
-  },
-  {
-    href: "https://craftcms.com",
-    text: "Learning that CraftCMS makes for a fine headless CMS.",
+    text: "Loves atomic CSS, never wants to go back to the old, dark ways.",
   },
   {
     href: "https://nextjs.org",
-    text:
-      "Learning that NextJS static html React pages can be fun and profitable.",
-  },
-  {
-    href: "https://www.gatsbyjs.org",
-    text: "And Gatsby too.",
+    text: "NextJS is pretty sweet.",
   },
 ];
 
