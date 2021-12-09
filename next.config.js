@@ -1,8 +1,4 @@
 module.exports = {
-  future: {
-    webpack5: true,
-  },
-
   plugins: [
     "postcss-flexbugs-fixes",
     [
