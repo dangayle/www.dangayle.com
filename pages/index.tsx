@@ -66,7 +66,6 @@ const Home: React.FunctionComponent = () => (
         <TextLink text="Email" href="mailto:dangayle@gmail.com" />
       </p>
     </nav>
-    <span>test</span>
     <style global={true} jsx={true}>{`
       .grow {
         -moz-osx-font-smoothing: grayscale;
