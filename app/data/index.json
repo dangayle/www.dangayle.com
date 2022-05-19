@@ -1,0 +1,44 @@
+{
+  "data": [
+    {
+      "href": "https://www.crateandbarrel.com",
+      "text": "Currently a senior frontend developer at Crate and Barrel. #webperf"
+    },
+    {
+      "href": "https://www.helloalpha.com",
+      "text": "Formerly a full stack software engineer at Alpha Medical."
+    },
+    {
+      "href": "https://www.spokesman.com",
+      "text": "Formerly a full stack developer in The Spokesman-Review's newsroom."
+    },
+    {
+      "href": "https://www.twitter.com/dangayle",
+      "text": "Sometimes shouts into the wind on Twitter."
+    },
+    {
+      "href": "https://www.linkedin.com/in/dangayle",
+      "text": "Keeps his LinkedIn up to date, doesn't know why."
+    },
+    {
+      "href": "https://www.flickr.com/photos/dangayle",
+      "text": "Used to do photography until someone stole his camera bag."
+    },
+    {
+      "href": "https://www.instagram.com/melvin_the_fluffy",
+      "text": "Misses his squish-faced friend, Melvin the Fluffy. RIP."
+    },
+    {
+      "href": "https://www.instagram.com/fred_phyllis_george",
+      "text": "Struggles to maintain sanity working from home with two cats and an idiot doodle."
+    },
+    {
+      "href": "https://tailwindcss.com",
+      "text": "Loves Tailwind CSS, never wants to go back to the old, dark ways."
+    },
+    {
+      "href": "https://remix.run",
+      "text": "Current fascination is Remix. This website built with it."
+    }
+  ]
+}
