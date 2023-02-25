@@ -11,7 +11,7 @@ export const links: LinksFunction = () => {
   return [
     {
       rel: "preload",
-      href: "https://dangayle.mo.cloudinary.net/profile/IMG_2353.jpg?tx=ar_1:1,c_fill,g_auto:subject,h_600,w_600",
+      href: "https://dangayle.mo.cloudinary.net/profile/IMG_2353.jpg?tx=ar_1:1,c_fill,g_auto:subject,w_responsive",
       as: "image",
     },
   ];
@@ -33,7 +33,7 @@ export default function Index() {
     <TwoColumn
       navigation={
         <>        
-          <img className="w-full mb-4" src="https://dangayle.mo.cloudinary.net/profile/IMG_2353.jpg?tx=ar_1:1,c_fill,g_auto:subject,h_600,w_600" alt="Daniel Gayle" />
+          <img className="w-full mb-4" src="https://dangayle.mo.cloudinary.net/profile/IMG_2353.jpg?tx=ar_1:1,c_fill,g_auto:subject,w_responsive" alt="Daniel Gayle" />
           <p>
             <TextLink text="Email me" href="mailto:dangayle@gmail.com" />
           </p>
