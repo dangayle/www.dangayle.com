@@ -1,39 +1,66 @@
-import type { MetaFunction } from "@remix-run/node";
 import {
+  isRouteErrorResponse,
   Links,
-  LiveReload,
   Meta,
   Outlet,
   Scripts,
   ScrollRestoration,
-} from "@remix-run/react";
+} from "react-router";
 
-import styles from "~/styles/global.css";
+import type { Route } from "./+types/root";
+import globalStyles from "../styles/global.css?url";
 
-export function links() {
-  return [{ rel: "stylesheet", href: styles }];
-}
+export const links: Route.LinksFunction = () => [
+  { rel: "stylesheet", href: globalStyles },
+];
 
-
-export const meta: MetaFunction = () => ({
-  charset: "utf-8",
-  title: "New Remix App",
-  viewport: "width=device-width,initial-scale=1",
-});
-
-export default function App() {
+export function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className="f4">
+    <html lang="en" className="text-base">
       <head>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <Meta />
         <Links />
       </head>
       <body className="font-serif">
-        <Outlet />
+        {children}
         <ScrollRestoration />
         <Scripts />
-        <LiveReload />
       </body>
     </html>
+  );
+}
+
+export default function App() {
+  return <Outlet />;
+}
+
+export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
+  let message = "Oops!";
+  let details = "An unexpected error occurred.";
+  let stack: string | undefined;
+
+  if (isRouteErrorResponse(error)) {
+    message = error.status === 404 ? "404" : "Error";
+    details =
+      error.status === 404
+        ? "The requested page could not be found."
+        : error.statusText || details;
+  } else if (import.meta.env.DEV && error && error instanceof Error) {
+    details = error.message;
+    stack = error.stack;
+  }
+
+  return (
+    <main className="pt-16 p-4 container mx-auto">
+      <h1>{message}</h1>
+      <p>{details}</p>
+      {stack && (
+        <pre className="w-full p-4 overflow-x-auto">
+          <code>{stack}</code>
+        </pre>
+      )}
+    </main>
   );
 }
