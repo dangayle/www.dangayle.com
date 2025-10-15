@@ -2,7 +2,6 @@ import type { Route } from "./+types/home";
 import type { TextLinkProps } from "~/components/TextLink";
 import TextLink from "~/components/TextLink";
 import TwoColumn from "~/layouts/TwoColumn";
-import { useLoaderData } from "react-router";
 import data from "~/data/index.json";
 
 export function meta({}: Route.MetaArgs) {
@@ -22,12 +21,8 @@ export function links() {
   ];
 }
 
-export async function loader({}: Route.LoaderArgs) {
-  return data;
-}
-
 export default function Home() {
-  const { data: navList } = useLoaderData<typeof loader>();
+  const navList = data.data;
   return (
     <TwoColumn
       navigation={
