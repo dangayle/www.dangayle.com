@@ -7,7 +7,10 @@ import data from "~/data/index.json";
 export function meta({}: Route.MetaArgs) {
   return [
     { title: "Daniel Gayle" },
-    { name: "description", content: "Full stack developer and #webperf engineer" },
+    {
+      name: "description",
+      content: "Full stack developer and #webperf engineer",
+    },
   ];
 }
 
@@ -15,7 +18,7 @@ export function links() {
   return [
     {
       rel: "preload",
-      href: "/profile.jpg",
+      href: "/cdn-cgi/image/width=600,height=600,fit=cover,gravity=auto,format=auto/profile.jpg",
       as: "image",
     },
   ];
@@ -27,10 +30,12 @@ export default function Home() {
     <TwoColumn
       navigation={
         <>
-          <img
-            className="w-full mb-4"
-            src="/profile.jpg"
+          <img 
+            className="w-full mb-4" 
+            src="/cdn-cgi/image/width=600,height=600,fit=cover,gravity=auto,format=auto/profile.jpg" 
             alt="Daniel Gayle"
+            width="600"
+            height="600"
           />
           <p>
             <TextLink text="Email me" href="mailto:dangayle@gmail.com" />
