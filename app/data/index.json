@@ -1,8 +1,12 @@
 {
   "data": [
     {
+      "href": "https://performance.shopify.com/pages/meet-the-team",
+      "text": "Currently a Technical Architect for Performance at Shopify."
+    },
+    {
       "href": "https://www.crateandbarrel.com",
-      "text": "Currently a senior frontend developer at Crate and Barrel on the web performance team. #webperf"
+      "text": "Formerly a lead developer at Crate and Barrel on the web performance team."
     },
     {
       "href": "https://www.helloalpha.com",
@@ -31,14 +35,6 @@
     {
       "href": "https://www.instagram.com/fred_phyllis_george",
       "text": "Struggles to maintain sanity working from home with two cats and an idiot doodle."
-    },
-    {
-      "href": "https://tailwindcss.com",
-      "text": "Loves Tailwind CSS, never wants to go back to the old, dark ways."
-    },
-    {
-      "href": "https://remix.run",
-      "text": "Current fascination is Remix. This website built with it."
     }
   ]
 }
