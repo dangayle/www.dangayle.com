@@ -34,16 +34,15 @@ export default function Home() {
 
   // Add speculation rules via useEffect to avoid innerHTML restrictions
   useEffect(() => {
-    // Extract all external URLs for speculation rules
-    const externalUrls = navList.map((link: TextLinkProps) => link.href);
-
     // Create and append speculation rules script element
     const script = document.createElement("script");
     script.type = "speculationrules";
     script.textContent = JSON.stringify({
       prefetch: [
         {
-          urls: externalUrls,
+          where: {
+            selector_matches: "a[href]", // Match all links
+          },
           eagerness: "immediate", // Prefetch immediately on page load
         },
       ],
@@ -54,7 +53,7 @@ export default function Home() {
     return () => {
       document.body.removeChild(script);
     };
-  }, [navList]);
+  }, []);
 
   return (
     <TwoColumn
