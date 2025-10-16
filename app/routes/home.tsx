@@ -38,10 +38,17 @@ export default function Home() {
     const script = document.createElement("script");
     script.type = "speculationrules";
     script.textContent = JSON.stringify({
-      prefetch: [
+      prerender: [
         {
-          urls: ["*"], // Match all URLs
-          eagerness: "immediate", // Prefetch immediately on page load
+          source: "document",
+          where: {
+            and: [
+              {
+                selector_matches: "*",
+              },
+            ],
+          },
+          eagerness: "immediate",
         },
       ],
     });
