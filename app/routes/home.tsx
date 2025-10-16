@@ -30,9 +30,9 @@ export default function Home() {
     <TwoColumn
       navigation={
         <>
-          <img 
-            className="w-full mb-4" 
-            src="/cdn-cgi/image/width=600,height=600,fit=cover,gravity=auto,format=auto/profile.jpg" 
+          <img
+            className="w-full mb-4"
+            src="/cdn-cgi/image/width=600,height=600,fit=cover,gravity=auto,format=auto/profile.jpg"
             alt="Daniel Gayle"
             width="600"
             height="600"
