@@ -7,7 +7,10 @@ import data from "~/data/index.json";
 export function meta({}: Route.MetaArgs) {
   return [
     { title: "Daniel Gayle" },
-    { name: "description", content: "Full stack developer and #webperf engineer" },
+    {
+      name: "description",
+      content: "Full stack developer and #webperf engineer",
+    },
   ];
 }
 
@@ -15,7 +18,7 @@ export function links() {
   return [
     {
       rel: "preload",
-      href: "https://dangayle.mo.cloudinary.net/profile/IMG_2353.jpg?tx=ar_1:1,c_fill,g_auto:subject,w_responsive",
+      href: "/cdn-cgi/image/width=600,height=600,fit=cover,gravity=auto,format=auto/profile.jpg",
       as: "image",
     },
   ];
@@ -29,8 +32,10 @@ export default function Home() {
         <>
           <img
             className="w-full mb-4"
-            src="https://dangayle.mo.cloudinary.net/profile/IMG_2353.jpg?tx=ar_1:1,c_fill,g_auto:subject,w_responsive"
+            src="/cdn-cgi/image/width=600,height=600,fit=cover,gravity=auto,format=auto/profile.jpg"
             alt="Daniel Gayle"
+            width="600"
+            height="600"
           />
           <p>
             <TextLink text="Email me" href="mailto:dangayle@gmail.com" />
