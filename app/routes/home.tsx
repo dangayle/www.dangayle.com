@@ -30,36 +30,60 @@ export function links() {
 
 export default function Home() {
   const navList = data.data;
+
+  // Extract all external URLs for speculation rules
+  const externalUrls = navList.map((link: TextLinkProps) => link.href);
+
   return (
-    <TwoColumn
-      navigation={
-        <>
-          <img
-            className="w-full mb-4"
-            src="/cdn-cgi/image/width=600,height=600,fit=cover,gravity=face,format=auto,quality=85/profile.jpg"
-            srcSet="/cdn-cgi/image/width=600,height=600,fit=cover,gravity=face,format=auto,quality=85/profile.jpg 1x, /cdn-cgi/image/width=1200,height=1200,fit=cover,gravity=face,format=auto,quality=85/profile.jpg 2x"
-            alt="Daniel Gayle"
-            loading="eager"
-            fetchPriority="high"
-            width="600"
-            height="600"
-          />
-          <p>
-            <TextLink text="Email me" href="mailto:dangayle@gmail.com" />
-          </p>
-        </>
-      }
-      body={
-        <>
-          <ul className="mb-8">
-            {navList.map((link: TextLinkProps) => (
-              <li key={link.href} className="mb-4 md:mb-2">
-                <TextLink text={link.text} href={link.href} />
-              </li>
-            ))}
-          </ul>
-        </>
-      }
-    />
+    <>
+      <TwoColumn
+        navigation={
+          <>
+            <img
+              className="w-full mb-4"
+              src="/cdn-cgi/image/width=600,height=600,fit=cover,gravity=face,format=auto,quality=85/profile.jpg"
+              srcSet="/cdn-cgi/image/width=600,height=600,fit=cover,gravity=face,format=auto,quality=85/profile.jpg 1x, /cdn-cgi/image/width=1200,height=1200,fit=cover,gravity=face,format=auto,quality=85/profile.jpg 2x"
+              alt="Daniel Gayle"
+              loading="eager"
+              fetchPriority="high"
+              width="600"
+              height="600"
+            />
+            <p>
+              <TextLink text="Email me" href="mailto:dangayle@gmail.com" />
+            </p>
+          </>
+        }
+        body={
+          <>
+            <ul className="mb-8">
+              {navList.map((link: TextLinkProps) => (
+                <li key={link.href} className="mb-4 md:mb-2">
+                  <TextLink text={link.text} href={link.href} />
+                </li>
+              ))}
+            </ul>
+          </>
+        }
+      />
+      {/* Speculation Rules for prefetching external links */}
+      <script
+        type="speculationrules"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            {
+              prefetch: [
+                {
+                  urls: externalUrls,
+                  eagerness: "immediate", // Prefetch immediately on page load
+                },
+              ],
+            },
+            null,
+            2
+          ),
+        }}
+      />
+    </>
   );
 }
