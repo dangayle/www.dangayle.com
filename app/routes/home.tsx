@@ -16,10 +16,14 @@ export function meta({}: Route.MetaArgs) {
 
 export function links() {
   return [
+    // Preload responsive images with srcset
     {
       rel: "preload",
-      href: "/cdn-cgi/image/width=600,height=600,fit=cover,gravity=face,format=auto,quality=85/profile.jpg",
       as: "image",
+      href: "/cdn-cgi/image/width=600,height=600,fit=cover,gravity=face,format=auto,quality=85/profile.jpg",
+      imagesrcset:
+        "/cdn-cgi/image/width=600,height=600,fit=cover,gravity=face,format=auto,quality=85/profile.jpg 600w, /cdn-cgi/image/width=1200,height=1200,fit=cover,gravity=face,format=auto,quality=85/profile.jpg 1200w",
+      imagesizes: "600px",
     },
   ];
 }
@@ -30,22 +34,16 @@ export default function Home() {
     <TwoColumn
       navigation={
         <>
-          <picture>
-            <source
-              srcSet="/cdn-cgi/image/width=300,height=300,fit=cover,gravity=face,format=auto,quality=85/profile.jpg 1x, /cdn-cgi/image/width=600,height=600,fit=cover,gravity=face,format=auto,quality=85/profile.jpg 2x"
-              media="(max-width: 768px)"
-            />
-            <img
-              className="w-full mb-4"
-              src="/cdn-cgi/image/width=600,height=600,fit=cover,gravity=face,format=auto,quality=85/profile.jpg"
-              srcSet="/cdn-cgi/image/width=600,height=600,fit=cover,gravity=face,format=auto,quality=85/profile.jpg 1x, /cdn-cgi/image/width=1200,height=1200,fit=cover,gravity=face,format=auto,quality=85/profile.jpg 2x"
-              alt="Daniel Gayle"
-              loading="eager"
-              fetchPriority="high"
-              width="600"
-              height="600"
-            />
-          </picture>
+          <img
+            className="w-full mb-4"
+            src="/cdn-cgi/image/width=600,height=600,fit=cover,gravity=face,format=auto,quality=85/profile.jpg"
+            srcSet="/cdn-cgi/image/width=600,height=600,fit=cover,gravity=face,format=auto,quality=85/profile.jpg 1x, /cdn-cgi/image/width=1200,height=1200,fit=cover,gravity=face,format=auto,quality=85/profile.jpg 2x"
+            alt="Daniel Gayle"
+            loading="eager"
+            fetchPriority="high"
+            width="600"
+            height="600"
+          />
           <p>
             <TextLink text="Email me" href="mailto:dangayle@gmail.com" />
           </p>
