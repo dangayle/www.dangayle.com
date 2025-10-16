@@ -15,7 +15,7 @@ export function links() {
   return [
     {
       rel: "preload",
-      href: "https://dangayle.mo.cloudinary.net/profile/IMG_2353.jpg?tx=ar_1:1,c_fill,g_auto:subject,w_responsive",
+      href: "/profile.jpg",
       as: "image",
     },
   ];
@@ -29,7 +29,7 @@ export default function Home() {
         <>
           <img
             className="w-full mb-4"
-            src="https://dangayle.mo.cloudinary.net/profile/IMG_2353.jpg?tx=ar_1:1,c_fill,g_auto:subject,w_responsive"
+            src="/profile.jpg"
             alt="Daniel Gayle"
           />
           <p>
