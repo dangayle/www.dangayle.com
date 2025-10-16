@@ -1,13 +1,17 @@
+import type { Route } from "./+types/home";
 import type { TextLinkProps } from "~/components/TextLink";
 import TextLink from "~/components/TextLink";
 import TwoColumn from "~/layouts/TwoColumn";
-import type { LoaderFunction } from "@remix-run/node";
-import { useLoaderData } from "@remix-run/react";
 import data from "~/data/index.json";
-import type { MetaFunction } from "@remix-run/node";
-import type { LinksFunction } from "@remix-run/node"; // or cloudflare/deno
 
-export const links: LinksFunction = () => {
+export function meta({}: Route.MetaArgs) {
+  return [
+    { title: "Daniel Gayle" },
+    { name: "description", content: "Full stack developer and #webperf engineer" },
+  ];
+}
+
+export function links() {
   return [
     {
       rel: "preload",
@@ -15,25 +19,19 @@ export const links: LinksFunction = () => {
       as: "image",
     },
   ];
-};
+}
 
-export const loader: LoaderFunction = async () => {
-  return data;
-};
-
-export const meta: MetaFunction = () => ({
-  charset: "utf-8",
-  title: "Daniel Gayle",
-  description: "Full stack developer and #webperf engineer",
-});
-
-export default function Index() {
-  const { data: navList } = useLoaderData() || [];
+export default function Home() {
+  const navList = data.data;
   return (
     <TwoColumn
       navigation={
-        <>        
-          <img className="w-full mb-4" src="https://dangayle.mo.cloudinary.net/profile/IMG_2353.jpg?tx=ar_1:1,c_fill,g_auto:subject,w_responsive" alt="Daniel Gayle" />
+        <>
+          <img
+            className="w-full mb-4"
+            src="https://dangayle.mo.cloudinary.net/profile/IMG_2353.jpg?tx=ar_1:1,c_fill,g_auto:subject,w_responsive"
+            alt="Daniel Gayle"
+          />
           <p>
             <TextLink text="Email me" href="mailto:dangayle@gmail.com" />
           </p>
@@ -50,6 +48,6 @@ export default function Index() {
           </ul>
         </>
       }
-    ></TwoColumn>
+    />
   );
 }
