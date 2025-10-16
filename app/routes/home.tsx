@@ -40,9 +40,7 @@ export default function Home() {
     script.textContent = JSON.stringify({
       prefetch: [
         {
-          where: {
-            selector_matches: "a[href]", // Match all links
-          },
+          urls: ["*"], // Match all URLs
           eagerness: "immediate", // Prefetch immediately on page load
         },
       ],
