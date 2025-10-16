@@ -32,34 +32,6 @@ export function links() {
 export default function Home() {
   const navList = data.data;
 
-  // Add speculation rules via useEffect to avoid innerHTML restrictions
-  useEffect(() => {
-    // Create and append speculation rules script element
-    const script = document.createElement("script");
-    script.type = "speculationrules";
-    script.textContent = JSON.stringify({
-      prerender: [
-        {
-          source: "document",
-          where: {
-            and: [
-              {
-                selector_matches: "*",
-              },
-            ],
-          },
-          eagerness: "immediate",
-        },
-      ],
-    });
-    document.body.appendChild(script);
-
-    // Cleanup function to remove script on unmount
-    return () => {
-      document.body.removeChild(script);
-    };
-  }, []);
-
   return (
     <TwoColumn
       navigation={
