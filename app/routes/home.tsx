@@ -35,8 +35,8 @@ export default function Home() {
               srcSet="/cdn-cgi/image/width=300,height=300,fit=cover,gravity=face,format=auto,quality=85/profile.jpg 1x, /cdn-cgi/image/width=600,height=600,fit=cover,gravity=face,format=auto,quality=85/profile.jpg 2x"
               media="(max-width: 768px)"
             />
-            <img 
-              className="w-full mb-4" 
+            <img
+              className="w-full mb-4"
               src="/cdn-cgi/image/width=600,height=600,fit=cover,gravity=face,format=auto,quality=85/profile.jpg"
               srcSet="/cdn-cgi/image/width=600,height=600,fit=cover,gravity=face,format=auto,quality=85/profile.jpg 1x, /cdn-cgi/image/width=1200,height=1200,fit=cover,gravity=face,format=auto,quality=85/profile.jpg 2x"
               alt="Daniel Gayle"
