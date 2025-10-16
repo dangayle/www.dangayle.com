@@ -18,7 +18,7 @@ export function links() {
   return [
     {
       rel: "preload",
-      href: "/profile.jpg",
+      href: "/cdn-cgi/image/width=600,height=600,fit=cover,gravity=face,format=auto,quality=85/profile.jpg",
       as: "image",
     },
   ];
@@ -30,7 +30,22 @@ export default function Home() {
     <TwoColumn
       navigation={
         <>
-          <img className="w-full mb-4" src="/profile.jpg" alt="Daniel Gayle" />
+          <picture>
+            <source
+              srcSet="/cdn-cgi/image/width=300,height=300,fit=cover,gravity=face,format=auto,quality=85/profile.jpg 1x, /cdn-cgi/image/width=600,height=600,fit=cover,gravity=face,format=auto,quality=85/profile.jpg 2x"
+              media="(max-width: 768px)"
+            />
+            <img 
+              className="w-full mb-4" 
+              src="/cdn-cgi/image/width=600,height=600,fit=cover,gravity=face,format=auto,quality=85/profile.jpg"
+              srcSet="/cdn-cgi/image/width=600,height=600,fit=cover,gravity=face,format=auto,quality=85/profile.jpg 1x, /cdn-cgi/image/width=1200,height=1200,fit=cover,gravity=face,format=auto,quality=85/profile.jpg 2x"
+              alt="Daniel Gayle"
+              loading="eager"
+              fetchPriority="high"
+              width="600"
+              height="600"
+            />
+          </picture>
           <p>
             <TextLink text="Email me" href="mailto:dangayle@gmail.com" />
           </p>
