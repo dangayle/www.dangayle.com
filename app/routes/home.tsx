@@ -18,7 +18,7 @@ export function links() {
   return [
     {
       rel: "preload",
-      href: "/cdn-cgi/image/width=600,height=600,fit=cover,gravity=auto,format=auto/profile.jpg",
+      href: "/profile.jpg",
       as: "image",
     },
   ];
@@ -30,13 +30,7 @@ export default function Home() {
     <TwoColumn
       navigation={
         <>
-          <img
-            className="w-full mb-4"
-            src="/cdn-cgi/image/width=600,height=600,fit=cover,gravity=auto,format=auto/profile.jpg"
-            alt="Daniel Gayle"
-            width="600"
-            height="600"
-          />
+          <img className="w-full mb-4" src="/profile.jpg" alt="Daniel Gayle" />
           <p>
             <TextLink text="Email me" href="mailto:dangayle@gmail.com" />
           </p>
