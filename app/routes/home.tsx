@@ -24,36 +24,6 @@ export function links() {
   ];
 }
 
-export function HydrateFallback() {
-  // Static content that matches the layout while JS loads
-  const placeholderWidths = ['75%', '60%', '80%', '70%', '65%'];
-  
-  return (
-    <TwoColumn
-      navigation={
-        <>
-          <div className="w-full aspect-square mb-4 bg-gray-100 animate-pulse rounded" />
-          <p>
-            <span className="text-blue-600 underline">Email me</span>
-          </p>
-        </>
-      }
-      body={
-        <>
-          <ul className="mb-8">
-            {/* Show placeholder items while loading */}
-            {placeholderWidths.map((width, i) => (
-              <li key={i} className="mb-4 md:mb-2">
-                <span className="inline-block h-5 bg-gray-100 animate-pulse rounded" style={{ width }} />
-              </li>
-            ))}
-          </ul>
-        </>
-      }
-    />
-  );
-}
-
 export default function Home() {
   const navList = data.data;
   return (
