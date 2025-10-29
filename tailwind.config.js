@@ -3,5 +3,8 @@ module.exports = {
   theme: {
     extend: {},
   },
+  corePlugins: {
+    flexGrow: false, // Disable Tailwind's flex-grow utilities to avoid conflict with custom .grow class
+  },
   plugins: [],
 };
