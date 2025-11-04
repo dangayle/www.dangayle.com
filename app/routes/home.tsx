@@ -37,7 +37,7 @@ export default function Home() {
       navigation={
         <>
           <img
-            className="w-full mb-4 grow"
+            className="w-full mb-4 grow-on-hover"
             src="/cdn-cgi/image/width=600,height=600,fit=cover,gravity=face,format=auto,quality=85/profile.jpg"
             srcSet="/cdn-cgi/image/width=600,height=600,fit=cover,gravity=face,format=auto,quality=85/profile.jpg 1x, /cdn-cgi/image/width=1200,height=1200,fit=cover,gravity=face,format=auto,quality=85/profile.jpg 2x"
             alt="Daniel Gayle"

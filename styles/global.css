@@ -2,18 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-.grow {
+.grow-on-hover {
   -moz-osx-font-smoothing: grayscale;
   backface-visibility: hidden;
   transform: translateZ(0);
   transition: transform 0.25s ease-out;
 }
 
-.grow:hover,
-.grow:focus {
+.grow-on-hover:hover,
+.grow-on-hover:focus {
   transform: scale(1.05);
 }
 
-.grow:active {
+.grow-on-hover:active {
   transform: scale(0.9);
 }
