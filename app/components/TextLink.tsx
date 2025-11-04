@@ -5,7 +5,7 @@ export type TextLinkProps = {
 
 function TextLink(props: TextLinkProps) {
   return (
-    <a href={props.href} className="link text-blue-600 hover:text-black hover:underline">{props.text}</a>
+    <a href={props.href} className="grow-on-hover link text-blue-600 hover:text-black hover:underline">{props.text}</a>
   );
 }
 
