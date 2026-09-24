@@ -1,14 +1,3 @@
 node_modules
-
-/.cache
 /build
-/public/build
-.env
-.cache
-.vercel
-.output
-/build/
-/api/index.js
-/api/index.js.map
 .DS_Store
-*.tsbuildinfo
