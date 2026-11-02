@@ -3,7 +3,7 @@ title: Daniel Gayle
 description: "Full stack developer and #webperf engineer"
 links:
   - href: https://performance.shopify.com/pages/meet-the-team
-    text: Currently a Technical Architect for Performance at Shopify.
+    text: Formerly a Technical Architect for Performance at Shopify.
   - href: https://www.crateandbarrel.com
     text: Formerly a lead developer at Crate and Barrel on the web performance team.
   - href: https://www.helloalpha.com
@@ -11,7 +11,7 @@ links:
   - href: https://www.spokesman.com
     text: Formerly a full stack developer in The Spokesman-Review's newsroom.
   - href: https://www.linkedin.com/in/dangayle
-    text: Keeps his LinkedIn up to date, doesn't know why.
+    text: Posts occasionally on LinkedIn. Message me there for work.
   - href: https://www.flickr.com/photos/dangayle
     text: Used to do photography until someone stole his camera bag.
   - href: https://www.instagram.com/melvin_the_fluffy
@@ -49,6 +49,41 @@ links:
       section { grid-column: span 2; }
       li { margin-bottom: 0.5rem; }
     }
+    .banner {
+      display: block;
+      padding: 0.75rem 1rem;
+      background: #064e3b;
+      color: #ecfdf5;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 0.9375rem;
+      letter-spacing: 0.02em;
+      text-align: center;
+      text-decoration: none;
+    }
+    .banner:hover, .banner:focus {
+      background: #065f46;
+      color: #fff;
+      text-decoration: none;
+    }
+    .banner:focus-visible { outline: 2px solid #ecfdf5; outline-offset: -5px; }
+    .banner__dot {
+      display: inline-block;
+      width: 0.5rem;
+      height: 0.5rem;
+      margin-right: 0.5rem;
+      border-radius: 50%;
+      background: #34d399;
+      vertical-align: 0.1em;
+      animation: banner-pulse 2.5s ease-in-out infinite;
+    }
+    .banner__link { text-decoration: underline; text-underline-offset: 0.15em; }
+    @keyframes banner-pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.35; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .banner__dot { animation: none; }
+    }
     .grow-on-hover {
       -moz-osx-font-smoothing: grayscale;
       backface-visibility: hidden;
@@ -61,6 +96,9 @@ links:
   </style>
 </head>
 <body>
+  <a class="banner" href="https://www.linkedin.com/in/dangayle" aria-label="Open for work. Connect with Daniel Gayle on LinkedIn.">
+    <span class="banner__dot" aria-hidden="true"></span>#openforwork<span aria-hidden="true"> &rarr; </span><span class="banner__link">LinkedIn</span>
+  </a>
   <div class="page">
     <header><h1>{{ title }}</h1></header>
     <main>
